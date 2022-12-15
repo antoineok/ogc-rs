@@ -321,7 +321,7 @@ dependencies = [
 [[package]]
 name = "ogc-sys"
 version = "0.1.1"
-source = "git+https://github.com/rust-wii/ogc-rs.git?branch=mp3#1218cbdb8cea4b07204130ae3daa10adea711429"
+source = "git+https://github.com/rust-wii/ogc-rs.git?branch=develop#2acba80796d1107e561ecd80fdd3690246f69a04"
 dependencies = [
  "bindgen",
  "libc",
