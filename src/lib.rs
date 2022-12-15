@@ -24,6 +24,7 @@
 #![feature(core_intrinsics)]
 #![feature(slice_ptr_get)]
 #![feature(allocator_api)]
+#![feature(asm_experimental_arch)]
 
 extern crate alloc;
 
@@ -36,6 +37,9 @@ pub mod network;
 
 // Audio Implementation
 pub mod audio;
+
+// Instant / Clock impl
+pub mod clock;
 
 //MP3Player impl
 pub mod mp3player;
