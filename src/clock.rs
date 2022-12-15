@@ -1,3 +1,5 @@
+use core::time::Duration;
+
 use bit_field::BitField;
 
 pub struct Instant {
@@ -28,6 +30,14 @@ impl Instant {
         instant.set_bits(32..=63, time1.into());
 
         Self { ticks: instant }
+    }
+
+    pub fn from_ticks(ticks: u64) -> Self {
+        Instant { ticks }
+    }
+
+    pub fn elapsed(&self) -> Duration {
+        Duration::from_nanos(Instant::from_ticks(Instant::now().ticks - self.ticks).nanosecs())
     }
 
     pub fn secs(&self) -> u64 {
