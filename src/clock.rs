@@ -47,7 +47,7 @@ impl Instant {
     }
 }
 
-pub fn set_time(time: u64) {
+pub unsafe fn set_time(time: u64) {
     let time_upper: u32 = time.get_bits(32..=63).try_into().unwrap();
     let time_lower: u32 = time.get_bits(0..=31).try_into().unwrap();
     unsafe {
